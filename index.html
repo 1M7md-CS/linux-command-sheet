@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Commands Reference Guide | Mohammad Hammad</title>
+
+    <meta name="description" content="A Linux commands reference guide (English & Arabic). Created by Mohammad Hammad.">
+    <meta name="keywords"
+          content="Linux commands, Linux cheat sheet, Linux reference, terminal commands, bash, Linux guide">
+    <meta name="author" content="Mohammad Hammad">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Linux Commands Reference Guide">
+    <meta property="og:description"
+          content="A Linux commands reference guide (English & Arabic). Created by Mohammad Hammad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/1M7md-CS/linux-command-sheet">
+    <meta property="og:image"
+          content="https://raw.githubusercontent.com/1M7md-CS/linux-command-sheet/main/src/images/preview.jpg">
+
+    <link rel="icon" href="src/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Linux Commands Reference Guide</h1>
+        <h2>دليل مرجعي لأوامر لينكس</h2>
+        <button class="download-btn" id="download-pdf">📄 Download PDF</button>
+    </header>
+
+    <main class="main-content">
+
+        <section class="section">
+            <div class="section-title">Navigation Commands | أوامر التنقل</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>pwd</td>
+                    <td>Print Working Directory</td>
+                    <td>pwd</td>
+                    <td>يعرض المسار الحالي الذي أنت فيه</td>
+                </tr>
+                <tr>
+                    <td>cd</td>
+                    <td>Change Directory</td>
+                    <td>cd Documents</td>
+                    <td>ينتقل إلى مجلد Documents</td>
+                </tr>
+                <tr>
+                    <td>cd ..</td>
+                    <td>Go up one directory</td>
+                    <td>cd ..</td>
+                    <td>يرجع للمجلد الأعلى (المجلد الأب)</td>
+                </tr>
+                <tr>
+                    <td>cd ~</td>
+                    <td>Go to home directory</td>
+                    <td>cd ~</td>
+                    <td>ينتقل إلى المجلد الرئيسي للمستخدم</td>
+                </tr>
+                <tr>
+                    <td>cd /</td>
+                    <td>Go to root directory</td>
+                    <td>cd /</td>
+                    <td>ينتقل إلى مجلد الجذر (Root)</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Listing Files Commands | أوامر عرض الملفات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ls</td>
+                    <td>List files</td>
+                    <td>ls</td>
+                    <td>يعرض قائمة بالملفات والمجلدات</td>
+                </tr>
+                <tr>
+                    <td>ls -a</td>
+                    <td>List all files (including hidden)</td>
+                    <td>ls -a</td>
+                    <td>يعرض جميع الملفات بما فيها المخفية</td>
+                </tr>
+                <tr>
+                    <td>ls -l</td>
+                    <td>Long listing format</td>
+                    <td>ls -l</td>
+                    <td>يعرض تفاصيل الملفات (الصالحيات، المالك، الحجم، التاريخ)</td>
+                </tr>
+                <tr>
+                    <td>ls -lh</td>
+                    <td>Human readable sizes</td>
+                    <td>ls -lh /usr/bin/omshell</td>
+                    <td>يعرض أحجام الملفات بشكل مفهوم (GB, MB)</td>
+                </tr>
+                <tr>
+                    <td>ls -d</td>
+                    <td>List directory itself</td>
+                    <td>ls -ld</td>
+                    <td>يعرض معلومات المجلد نفسه وليس محتوياته</td>
+                </tr>
+                <tr>
+                    <td>ls -R</td>
+                    <td>Recursive listing</td>
+                    <td>ls -R /etc/ppp</td>
+                    <td>يعرض جميع الملفات والمجلدات الفرعية</td>
+                </tr>
+                <tr>
+                    <td>ls -S</td>
+                    <td>Sort by size</td>
+                    <td>ls -lS /etc/ssh</td>
+                    <td>يرتب الملفات حسب الحجم</td>
+                </tr>
+                <tr>
+                    <td>ls -t</td>
+                    <td>Sort by time</td>
+                    <td>ls -tl /etc/ssh</td>
+                    <td>يرتب الملفات حسب وقت التعديل</td>
+                </tr>
+                <tr>
+                    <td>ls -r</td>
+                    <td>Reverse sort</td>
+                    <td>ls -lrS /etc/ssh</td>
+                    <td>يعكس ترتيب العرض</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">File Operations | عمليات الملفات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>touch</td>
+                    <td>Create empty file</td>
+                    <td>touch sample.txt</td>
+                    <td>ينشئ ملف فارغ جديد</td>
+                </tr>
+                <tr>
+                    <td>cp</td>
+                    <td>Copy files</td>
+                    <td>cp /etc/hosts ~</td>
+                    <td>ينسخ الملف إلى الموقع المحدد</td>
+                </tr>
+                <tr>
+                    <td>cp -v</td>
+                    <td>Verbose copy</td>
+                    <td>cp -v /etc/hosts ~</td>
+                    <td>ينسخ ويعرض رسالة النجاح</td>
+                </tr>
+                <tr>
+                    <td>cp -i</td>
+                    <td>Interactive copy</td>
+                    <td>cp -i file1 file2</td>
+                    <td>يسأل قبل الكتابة فوق ملف موجود</td>
+                </tr>
+                <tr>
+                    <td>cp -r</td>
+                    <td>Copy directory</td>
+                    <td>cp -r /etc/skel ~</td>
+                    <td>ينسخ المجلد وكل محتوياته</td>
+                </tr>
+                <tr>
+                    <td>mv</td>
+                    <td>Move/Rename files</td>
+                    <td>mv old.txt new.txt</td>
+                    <td>ينقل الملف أو يعيد تسميته</td>
+                </tr>
+                <tr>
+                    <td>mv -i</td>
+                    <td>Interactive move</td>
+                    <td>mv -i file1 file2</td>
+                    <td>يسأل قبل الكتابة فوق ملف موجود</td>
+                </tr>
+                <tr>
+                    <td>mv -v</td>
+                    <td>Verbose move</td>
+                    <td>mv -v old.txt new.txt</td>
+                    <td>ينقل ويعرض رسالة النجاح</td>
+                </tr>
+                <tr>
+                    <td>rm</td>
+                    <td>Remove file</td>
+                    <td>rm sample.txt</td>
+                    <td>يحذف الملف</td>
+                </tr>
+                <tr>
+                    <td>rm -i</td>
+                    <td>Interactive remove</td>
+                    <td>rm -i *.txt</td>
+                    <td>يسأل قبل حذف كل ملف</td>
+                </tr>
+                <tr>
+                    <td>rm -r</td>
+                    <td>Remove directory</td>
+                    <td>rm -r Videos</td>
+                    <td>يحذف المجلد وكل محتوياته</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Directory Operations | عمليات المجلدات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>mkdir</td>
+                    <td>Make directory</td>
+                    <td>mkdir test</td>
+                    <td>ينشئ مجلد جديد</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">File & Permission Management | إدارة الملفات والأذونات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>chgrp</td>
+                    <td>Change group ownership of files</td>
+                    <td>chgrp group file.txt</td>
+                    <td>تغيير ملكية المجموعة للملفات</td>
+                </tr>
+                <tr>
+                    <td>chmod</td>
+                    <td>Change file mode bits (permissions)</td>
+                    <td>chmod u+w file.txt</td>
+                    <td>تغيير أذونات الملف</td>
+                </tr>
+                <tr>
+                    <td>umask</td>
+                    <td>Set file mode creation mask</td>
+                    <td>umask 027</td>
+                    <td>تعيين قناع إنشاء وضع الملف</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Help Commands | أوامر المساعدة</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>man</td>
+                    <td>Manual pages</td>
+                    <td>man ls</td>
+                    <td>يعرض دليل الاستخدام للأمر</td>
+                </tr>
+                <tr>
+                    <td>man -f</td>
+                    <td>Find man pages</td>
+                    <td>man -f passwd</td>
+                    <td>يبحث عن صفحات الدليل</td>
+                </tr>
+                <tr>
+                    <td>info</td>
+                    <td>Info documentation</td>
+                    <td>info ls</td>
+                    <td>يعرض معلومات تفصيلية عن الأمر</td>
+                </tr>
+                <tr>
+                    <td>help</td>
+                    <td>Help option</td>
+                    <td>help --</td>
+                    <td>يعرض مساعدة سريعة عن الأمر</td>
+                </tr>
+                <tr>
+                    <td>whereis</td>
+                    <td>Locate command</td>
+                    <td>whereis ls</td>
+                    <td>يبحث عن موقع الأمر وصفحات الدليل</td>
+                </tr>
+                <tr>
+                    <td>locate</td>
+                    <td>Find files</td>
+                    <td>locate passwd</td>
+                    <td>يبحث عن الملفات في قاعدة البيانات</td>
+                </tr>
+                <tr>
+                    <td>locate -c</td>
+                    <td>Count matches</td>
+                    <td>locate -c passwd</td>
+                    <td>يعد الملفات المطابقة</td>
+                </tr>
+                <tr>
+                    <td>locate -b</td>
+                    <td>Basename only</td>
+                    <td>locate -b "\passwd"</td>
+                    <td>يبحث فقط في اسم الملف</td>
+                </tr>
+                <tr>
+                    <td>which</td>
+                    <td>Show command path</td>
+                    <td>which ls</td>
+                    <td>يعرض مسار الأمر</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>Command type</td>
+                    <td>type cd</td>
+                    <td>يحدد نوع الأمر (داخلي/خارجي)</td>
+                </tr>
+                <tr>
+                    <td>type -a</td>
+                    <td>All locations</td>
+                    <td>type -a echo</td>
+                    <td>يعرض جميع مواقع الأمر</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">History Commands | أوامر السجل</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>history</td>
+                    <td>Show command history</td>
+                    <td>history</td>
+                    <td>يعرض سجل الأوامر السابقة</td>
+                </tr>
+                <tr>
+                    <td>history 3</td>
+                    <td>Show last 3 commands</td>
+                    <td>history 3</td>
+                    <td>يعرض آخر 3 أوامر</td>
+                </tr>
+                <tr>
+                    <td>!3</td>
+                    <td>Execute #3 command</td>
+                    <td>!3</td>
+                    <td>ينفذ الأمر رقم 3 من السجل</td>
+                </tr>
+                <tr>
+                    <td>!!</td>
+                    <td>Execute last command</td>
+                    <td>!!</td>
+                    <td>ينفذ آخر أمر تم تنفيذه</td>
+                </tr>
+                <tr>
+                    <td>!command</td>
+                    <td>Execute last occurrence</td>
+                    <td>!ls</td>
+                    <td>ينفذ آخر أمر ls</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Variables | المتغيرات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>variable=value</td>
+                    <td>Set local variable</td>
+                    <td>variable1='Something'</td>
+                    <td>ينشئ متغير محلي</td>
+                </tr>
+                <tr>
+                    <td>echo $variable</td>
+                    <td>Display variable</td>
+                    <td>echo $variable1</td>
+                    <td>يعرض قيمة المتغير</td>
+                </tr>
+                <tr>
+                    <td>export</td>
+                    <td>Make environment variable</td>
+                    <td>export variable1</td>
+                    <td>يحول المتغير إلى متغير بيئي عام</td>
+                </tr>
+                <tr>
+                    <td>env</td>
+                    <td>Show environment variables</td>
+                    <td>env</td>
+                    <td>يعرض جميع متغيرات البيئة</td>
+                </tr>
+                <tr>
+                    <td>unset</td>
+                    <td>Remove variable</td>
+                    <td>unset variable1</td>
+                    <td>يحذف المتغير</td>
+                </tr>
+                <tr>
+                    <td>echo $PATH</td>
+                    <td>Show PATH</td>
+                    <td>echo $PATH</td>
+                    <td>يعرض مسارات البحث عن الأوامر</td>
+                </tr>
+                <tr>
+                    <td>echo $HOME</td>
+                    <td>Show home directory</td>
+                    <td>echo $HOME</td>
+                    <td>يعرض مسار المجلد الرئيسي</td>
+                </tr>
+                <tr>
+                    <td>echo $HISTSIZE</td>
+                    <td>Show history size</td>
+                    <td>echo $HISTSIZE</td>
+                    <td>يعرض حجم سجل الأوامر</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Package Management (APT) | إدارة الحزم (APT)</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>sudo apt-get update</td>
+                    <td>Update package list</td>
+                    <td>sudo apt-get update</td>
+                    <td>يحدث قائمة الحزم المتاحة</td>
+                </tr>
+                <tr>
+                    <td>sudo apt-get upgrade</td>
+                    <td>Upgrade packages</td>
+                    <td>sudo apt-get upgrade</td>
+                    <td>يرقي الحزم المثبتة للإصدارات الأحدث</td>
+                </tr>
+                <tr>
+                    <td>sudo apt update</td>
+                    <td>Update (newer syntax)</td>
+                    <td>sudo apt update</td>
+                    <td>يحدث قائمة الحزم (أمر حديث)</td>
+                </tr>
+                <tr>
+                    <td>sudo apt upgrade</td>
+                    <td>Upgrade (newer syntax)</td>
+                    <td>sudo apt upgrade</td>
+                    <td>يرقي الحزم (أمر حديث)</td>
+                </tr>
+                <tr>
+                    <td>sudo apt install</td>
+                    <td>Install package</td>
+                    <td>sudo apt install vim</td>
+                    <td>يثبت برنامج جديد</td>
+                </tr>
+                <tr>
+                    <td>sudo apt install gnome-shell-extensions</td>
+                    <td>Install GNOME extensions</td>
+                    <td>sudo apt install gnome-shell-extensions</td>
+                    <td>يثبت إضافات GNOME</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Text Editors | محررات النصوص</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>vim</td>
+                    <td>Vi Improved editor</td>
+                    <td>vim file.txt</td>
+                    <td>يفتح محرر نصوص vim</td>
+                </tr>
+                <tr>
+                    <td>nano</td>
+                    <td>Simple text editor</td>
+                    <td>nano file.txt</td>
+                    <td>يفتح محرر النصوص البسيط nano</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">System Information | معلومات النظام</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>uname -r</td>
+                    <td>Kernel version</td>
+                    <td>uname -r</td>
+                    <td>يعرض إصدار النواة</td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td>Show date/time</td>
+                    <td>date</td>
+                    <td>يعرض التاريخ والوقت</td>
+                </tr>
+                <tr>
+                    <td>cal</td>
+                    <td>Calendar</td>
+                    <td>cal 5 2030</td>
+                    <td>يعرض تقويم شهر 5 سنة 2030</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Aliases | الاختصارات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>alias</td>
+                    <td>Show aliases</td>
+                    <td>alias</td>
+                    <td>يعرض جميع الاختصارات المعرفة</td>
+                </tr>
+                <tr>
+                    <td>alias ll='ls -alF'</td>
+                    <td>Create alias</td>
+                    <td>alias ll='ls -alF'</td>
+                    <td>ينشئ اختصار جديد</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Control Statements | عبارات التحكم</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Operator</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>;</td>
+                    <td>Sequential execution</td>
+                    <td>cal 1 2015; cal 2 2015</td>
+                    <td>ينفذ الأوامر بالترتيب</td>
+                </tr>
+                <tr>
+                    <td>&&</td>
+                    <td>AND operator</td>
+                    <td>ls /etc/xml && echo success</td>
+                    <td>ينفذ الأمر الثاني إذا نجح الأول</td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>OR operator</td>
+                    <td>ls /etc/junk || echo failed</td>
+                    <td>ينفذ الأمر الثاني إذا فشل الأول</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Quoting & Special Characters | الاقتباس والأحرف الخاصة</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Character</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>"..."</td>
+                    <td>Double quotes</td>
+                    <td>echo "The path is $PATH"</td>
+                    <td>يسمح بتفسير المتغيرات</td>
+                </tr>
+                <tr>
+                    <td>'...'</td>
+                    <td>Single quotes</td>
+                    <td>echo 'The cost is $100'</td>
+                    <td>يمنع تفسير أي رموز خاصة</td>
+                </tr>
+                <tr>
+                    <td>\</td>
+                    <td>Backslash</td>
+                    <td>echo \$100</td>
+                    <td>يلغي تفسير الرمز التالي</td>
+                </tr>
+                <tr>
+                    <td>`...`</td>
+                    <td>Backquotes</td>
+                    <td>echo Today is `date`</td>
+                    <td>ينفذ الأمر ويستخدم ناتجه</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Globbing & Wildcards | التجميع والبدائل</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Character</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>*</td>
+                    <td>Match zero or more characters</td>
+                    <td>ls *.txt</td>
+                    <td>يطابق أي عدد من الأحرف</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>Match exactly one character</td>
+                    <td>ls file?.txt</td>
+                    <td>يطابق حرف واحد فقط</td>
+                </tr>
+                <tr>
+                    <td>[abc]</td>
+                    <td>Match one character from set</td>
+                    <td>ls [abc]*</td>
+                    <td>يطابق أي حرف من المجموعة</td>
+                </tr>
+                <tr>
+                    <td>[a-d]</td>
+                    <td>Match range of characters</td>
+                    <td>ls [a-d]*</td>
+                    <td>يطابق أي حرف في المدى</td>
+                </tr>
+                <tr>
+                    <td>[!a-t]</td>
+                    <td>Negate range</td>
+                    <td>ls [!a-t]*</td>
+                    <td>يطابق أي حرف خارج المدى</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Search in Man Pages | البحث في صفحات الدليل</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Key</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>/</td>
+                    <td>Search term</td>
+                    <td>يبحث عن كلمة في الصفحة</td>
+                </tr>
+                <tr>
+                    <td>n</td>
+                    <td>Next match</td>
+                    <td>ينتقل للنتيجة التالية</td>
+                </tr>
+                <tr>
+                    <td>N</td>
+                    <td>Previous match</td>
+                    <td>يرجع للنتيجة السابقة</td>
+                </tr>
+                <tr>
+                    <td>q</td>
+                    <td>Quit</td>
+                    <td>يخرج من صفحة المساعدة</td>
+                </tr>
+                <tr>
+                    <td>h</td>
+                    <td>Help</td>
+                    <td>يعرض المساعدة</td>
+                </tr>
+                <tr>
+                    <td>Arrow keys</td>
+                    <td>Navigate</td>
+                    <td>التنقل بين الأسطر</td>
+                </tr>
+                <tr>
+                    <td>PgUp/PgDn</td>
+                    <td>Page up/down</td>
+                    <td>التنقل بين الصفحات</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">File Permissions Symbols | رموز أذونات الملفات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Symbol</th>
+                    <th class="col-desc">Type</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>d</td>
+                    <td>directory</td>
+                    <td>مجلد</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>regular file</td>
+                    <td>ملف عادي</td>
+                </tr>
+                <tr>
+                    <td>l</td>
+                    <td>symbolic link</td>
+                    <td>رابط رمزي</td>
+                </tr>
+                <tr>
+                    <td>s</td>
+                    <td>socket</td>
+                    <td>مقبس للاتصال</td>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>pipe</td>
+                    <td>أنبوب للاتصال</td>
+                </tr>
+                <tr>
+                    <td>b</td>
+                    <td>block file</td>
+                    <td>ملف كتلة</td>
+                </tr>
+                <tr>
+                    <td>c</td>
+                    <td>character file</td>
+                    <td>ملف محرف</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Special Directories | المجلدات الخاصة</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Symbol</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>/</td>
+                    <td>Root directory</td>
+                    <td>الجذر</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>Home directory</td>
+                    <td>المجلد الرئيسي</td>
+                </tr>
+                <tr>
+                    <td>.</td>
+                    <td>Current directory</td>
+                    <td>المجلد الحالي</td>
+                </tr>
+                <tr>
+                    <td>..</td>
+                    <td>Parent directory</td>
+                    <td>المجلد الأب</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Archiving & Compression | الأرشفة والضغط</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>gzip</td>
+                    <td>Compress file</td>
+                    <td>gzip file.txt</td>
+                    <td>يقلل حجم الملف ويستبدله بـ file.txt.gz</td>
+                </tr>
+                <tr>
+                    <td>gunzip</td>
+                    <td>Decompress file</td>
+                    <td>gunzip file.txt.gz</td>
+                    <td>يستعيد الملف الأصلي</td>
+                </tr>
+                <tr>
+                    <td>gzip -d</td>
+                    <td>Decompress (alternative)</td>
+                    <td>gzip -d file.txt.gz</td>
+                    <td>فك الضغط (بديل)</td>
+                </tr>
+                <tr>
+                    <td>gzip -l</td>
+                    <td>Show compression info</td>
+                    <td>gzip -l file.txt.gz</td>
+                    <td>يعرض الحجم قبل وبعد الضغط</td>
+                </tr>
+                <tr>
+                    <td>tar -cf</td>
+                    <td>Create archive</td>
+                    <td>tar -cf archive.tar file1 file2</td>
+                    <td>يجمع ملفات متعددة في أرشيف</td>
+                </tr>
+                <tr>
+                    <td>tar -czf</td>
+                    <td>Create gzip compressed archive</td>
+                    <td>tar -czf archive.tar.gz file1 file2</td>
+                    <td>أرشيف مضغوط بصيغة gzip</td>
+                </tr>
+                <tr>
+                    <td>tar -cjf</td>
+                    <td>Create bzip2 compressed archive</td>
+                    <td>tar -cjf archive.tbz folder</td>
+                    <td>أرشيف مضغوط بصيغة bzip2</td>
+                </tr>
+                <tr>
+                    <td>tar -tf</td>
+                    <td>List archive contents</td>
+                    <td>tar -tf archive.tar</td>
+                    <td>يعرض الملفات داخل الأرشيف</td>
+                </tr>
+                <tr>
+                    <td>tar -tjf</td>
+                    <td>List bzip2 archive contents</td>
+                    <td>tar -tjf archive.tbz</td>
+                    <td>يعرض الملفات المضغوطة بصيغة bzip2</td>
+                </tr>
+                <tr>
+                    <td>tar -xf</td>
+                    <td>Extract archive</td>
+                    <td>tar -xf archive.tar</td>
+                    <td>يفك الأرشيف</td>
+                </tr>
+                <tr>
+                    <td>tar -xzf</td>
+                    <td>Extract gzip archive</td>
+                    <td>tar -xzf archive.tar.gz</td>
+                    <td>يفك أرشيف مضغوط gzip</td>
+                </tr>
+                <tr>
+                    <td>tar -xjf</td>
+                    <td>Extract bzip2 archive</td>
+                    <td>tar -xjf archive.tbz</td>
+                    <td>يفك أرشيف مضغوط bzip2</td>
+                </tr>
+                <tr>
+                    <td>zip</td>
+                    <td>Create ZIP archive</td>
+                    <td>zip archive.zip file1 file2</td>
+                    <td>إنشاء أرشيف مضغوط بصيغة ZIP</td>
+                </tr>
+                <tr>
+                    <td>zip -r</td>
+                    <td>Create ZIP with folder</td>
+                    <td>zip -r archive.zip folder</td>
+                    <td>يضغط مجلد كامل</td>
+                </tr>
+                <tr>
+                    <td>unzip -l</td>
+                    <td>List ZIP contents</td>
+                    <td>unzip -l archive.zip</td>
+                    <td>يعرض الملفات داخل ZIP</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Text Processing Commands | أوامر معالجة النصوص</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>cat</td>
+                    <td>Create, display, combine text files, or redirect content</td>
+                    <td>cat food.txt</td>
+                    <td>إنشاء، عرض، دمج ملفات نصية، أو إعادة توجيه المحتوى</td>
+                </tr>
+                <tr>
+                    <td>less</td>
+                    <td>Advanced pager for viewing large files with navigation</td>
+                    <td>less words</td>
+                    <td>عرض متقدم للملفات الكبيرة مع إمكانية التنقل</td>
+                </tr>
+                <tr>
+                    <td>more</td>
+                    <td>Basic pager for viewing files</td>
+                    <td>more file.txt</td>
+                    <td>عرض أساسي للملفات</td>
+                </tr>
+                <tr>
+                    <td>head</td>
+                    <td>Display the first few lines of a file</td>
+                    <td>head -n 5 file.txt</td>
+                    <td>عرض السطور الأولى من ملف</td>
+                </tr>
+                <tr>
+                    <td>tail</td>
+                    <td>Display the last few lines of a file</td>
+                    <td>tail -n 5 file.txt</td>
+                    <td>عرض السطور الأخيرة من ملف</td>
+                </tr>
+                <tr>
+                    <td>tr</td>
+                    <td>Translate or delete characters</td>
+                    <td>tr 'a-z' 'A-Z' &lt; file.txt</td>
+                    <td>ترجمة أو حذف أحرف</td>
+                </tr>
+                <tr>
+                    <td>sort</td>
+                    <td>Sort lines of text files</td>
+                    <td>sort -t: -n -k3 file.txt</td>
+                    <td>ترتيب سطور الملفات النصية</td>
+                </tr>
+                <tr>
+                    <td>wc</td>
+                    <td>Count lines, words, and bytes in files</td>
+                    <td>wc file.txt</td>
+                    <td>عد السطور، الكلمات، والبايتات في الملفات</td>
+                </tr>
+                <tr>
+                    <td>cut</td>
+                    <td>Extract sections from each line of files</td>
+                    <td>cut -d: -f1,5-7 file.txt</td>
+                    <td>استخراج أقسام من كل سطر في الملفات</td>
+                </tr>
+                <tr>
+                    <td>grep</td>
+                    <td>Search text using patterns or regular expressions</td>
+                    <td>grep -E 'pattern' file.txt</td>
+                    <td>البحث في النصوص باستخدام أنماط أو تعبيرات منتظمة</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Network Commands | أوامر الشبكة</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ifconfig</td>
+                    <td>Display or configure network interface parameters</td>
+                    <td>ifconfig</td>
+                    <td>عرض أو تهيئة معلمات واجهة الشبكة</td>
+                </tr>
+                <tr>
+                    <td>ping</td>
+                    <td>Send echo requests to test network connectivity</td>
+                    <td>ping -c 4 192.168.1.1</td>
+                    <td>إرسال طلبات صدى لاختبار الاتصال بالشبكة</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">User & Group Management | إدارة المستخدمين والمجموعات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>su</td>
+                    <td>Switch user or become superuser</td>
+                    <td>su - root</td>
+                    <td>تبديل المستخدم أو التحول إلى المستخدم الجذر</td>
+                </tr>
+                <tr>
+                    <td>sudo</td>
+                    <td>Execute a command as another user (usually root)</td>
+                    <td>sudo command</td>
+                    <td>تنفيذ أمر كمستخدم آخر (عادة الجذر)</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>Display user and group IDs</td>
+                    <td>id username</td>
+                    <td>عرض هويات المستخدم والمجموعات</td>
+                </tr>
+                <tr>
+                    <td>who</td>
+                    <td>Show who is logged on</td>
+                    <td>who</td>
+                    <td>عرض من مسجل الدخول</td>
+                </tr>
+                <tr>
+                    <td>w</td>
+                    <td>Show who is logged on and what they are doing</td>
+                    <td>w</td>
+                    <td>عرض من مسجل الدخول وما يفعلونه</td>
+                </tr>
+                <tr>
+                    <td>last</td>
+                    <td>Show listing of last logged-in users</td>
+                    <td>last</td>
+                    <td>عرض قائمة آخر المستخدمين الذين سجلوا الدخول</td>
+                </tr>
+                <tr>
+                    <td>getent</td>
+                    <td>Get entries from administrative databases</td>
+                    <td>getent group root</td>
+                    <td>الحصول على إدخالات من قواعد البيانات الإدارية</td>
+                </tr>
+                <tr>
+                    <td>groups</td>
+                    <td>Display group memberships</td>
+                    <td>groups username</td>
+                    <td>عرض عضويات المجموعات</td>
+                </tr>
+                <tr>
+                    <td>groupadd</td>
+                    <td>Create a new group</td>
+                    <td>groupadd -g 506 research</td>
+                    <td>إنشاء مجموعة جديدة</td>
+                </tr>
+                <tr>
+                    <td>groupmod</td>
+                    <td>Modify a group</td>
+                    <td>groupmod -n newname oldname</td>
+                    <td>تعديل مجموعة</td>
+                </tr>
+                <tr>
+                    <td>groupdel</td>
+                    <td>Delete a group</td>
+                    <td>groupdel groupname</td>
+                    <td>حذف مجموعة</td>
+                </tr>
+                <tr>
+                    <td>useradd</td>
+                    <td>Create a new user</td>
+                    <td>useradd -u 1000 -g users username</td>
+                    <td>إنشاء مستخدم جديد</td>
+                </tr>
+                <tr>
+                    <td>passwd</td>
+                    <td>Change user password</td>
+                    <td>passwd username</td>
+                    <td>تغيير كلمة مرور المستخدم</td>
+                </tr>
+                <tr>
+                    <td>usermod</td>
+                    <td>Modify a user account</td>
+                    <td>usermod -c "Comment" username</td>
+                    <td>تعديل حساب مستخدم</td>
+                </tr>
+                <tr>
+                    <td>newgrp</td>
+                    <td>Log into a new group</td>
+                    <td>newgrp groupname</td>
+                    <td>تسجيل الدخول إلى مجموعة جديدة</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">File Management & Finding | إدارة والبحث عن الملفات</div>
+            <table class="command-table">
+                <thead>
+                <tr>
+                    <th class="col-command">Command</th>
+                    <th class="col-desc">Description</th>
+                    <th class="col-syntax">Syntax</th>
+                    <th class="col-arabic">الوصف</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>find</td>
+                    <td>Search for files in a directory hierarchy</td>
+                    <td>find -nogroup</td>
+                    <td>البحث عن الملفات في هيكل الدليل</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section">
+            <div class="section-title">Tips | نصائح مهمة</div>
+            <div class="tips-container">
+                <ul class="tips-list">
+                    <li>استخدم <strong>Tab</strong> للإكمال التلقائي للأوامر والملفات</li>
+                    <li>استخدم الأسهم <strong>↑</strong> و <strong>↓</strong> للتنقل في سجل الأوامر</li>
+                    <li>استخدم <strong>Ctrl+C</strong> لإيقاف أمر قيد التنفيذ</li>
+                    <li>استخدم <strong>clear</strong> لمسح الشاشة</li>
+                    <li>جميع الأوامر في لينكس حساسة لحالة الحرف <strong>(Case Sensitive)</strong></li>
+                    <li>استخدم <strong>-i</strong> مع أوامر الحذف والنسخ للحماية من الأخطاء</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Mohammad Hammad<span>.</span></h3>
+                <p>Linux Commands Reference Guide<br>English & Arabic Cheat Sheet</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links</h4>
+                <a href="https://github.com/1M7md-CS" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/1m7md/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.instagram.com/lwx.6" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+            <div class="footer-meta">
+                <h4>About</h4>
+                <p>Designed for students & developers.<br>Optimized for print & PDF (A4).</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 · Linux Commands Sheet · Crafted by <a href="https://github.com/1M7md-CS" target="_blank"
+                                                             rel="noopener noreferrer">Mohammad Hammad</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="src/js/main.js"></script>
+</body>
+</html>
