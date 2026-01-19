@@ -248,6 +248,7 @@ body {
     text-decoration: none;
     margin-bottom: 8px;
     transition: color 0.2s ease;
+    max-width: fit-content;
 }
 
 .footer-links a:hover {
