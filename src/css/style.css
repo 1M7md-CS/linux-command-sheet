@@ -327,6 +327,10 @@ body {
         text-align: center;
         gap: 30px;
     }
+
+    .footer-links a {
+        max-width: none;
+    }
 }
 
 @media (max-width: 480px) {
