@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="src/css/style.css"> -->
+    <!--<link rel="stylesheet" href="src/css/style.css">-->
     <link rel="stylesheet" href="src/css/style.min.css">
 </head>
 
@@ -329,7 +329,7 @@
                 <tr>
                     <td>help</td>
                     <td>Help option</td>
-                    <td>help --</td>
+                    <td>help cd</td>
                     <td>يعرض مساعدة سريعة عن الأمر</td>
                 </tr>
                 <tr>
@@ -1083,13 +1083,73 @@
                     <td>ifconfig</td>
                     <td>Display or configure network interface parameters</td>
                     <td>ifconfig</td>
-                    <td>عرض أو تهيئة معلمات واجهة الشبكة</td>
+                    <td>عرض أو تهيئة معلمات واجهة الشبكة (تهيئة الواجهة)</td>
+                </tr>
+                <tr>
+                    <td>ip</td>
+                    <td>Modern replacement for ifconfig with more functionality</td>
+                    <td>ip addr show</td>
+                    <td>أمر حديث بديل لـ ifconfig مع وظائف أكثر</td>
+                </tr>
+                <tr>
+                    <td>ip addr</td>
+                    <td>Show IP addresses and network interfaces</td>
+                    <td>ip addr</td>
+                    <td>عرض عناوين IP وواجهات الشبكة</td>
+                </tr>
+                <tr>
+                    <td>ip link</td>
+                    <td>Show network link layer information</td>
+                    <td>ip link show</td>
+                    <td>عرض معلومات طبقة الربط للشبكة</td>
+                </tr>
+                <tr>
+                    <td>route</td>
+                    <td>Show or manipulate the IP routing table</td>
+                    <td>route</td>
+                    <td>عرض أو تعديل جدول توجيه IP</td>
                 </tr>
                 <tr>
                     <td>ping</td>
                     <td>Send echo requests to test network connectivity</td>
                     <td>ping -c 4 192.168.1.1</td>
                     <td>إرسال طلبات صدى لاختبار الاتصال بالشبكة</td>
+                </tr>
+                <tr>
+                    <td>netstat</td>
+                    <td>Display network connections, routing tables, and interface statistics</td>
+                    <td>netstat -tln</td>
+                    <td>عرض اتصالات الشبكة، وجداول التوجيه، وإحصائيات الواجهة</td>
+                </tr>
+                <tr>
+                    <td>netstat -r</td>
+                    <td>Display routing table</td>
+                    <td>netstat -r</td>
+                    <td>عرض جدول التوجيه</td>
+                </tr>
+                <tr>
+                    <td>ss</td>
+                    <td>Display socket statistics (modern replacement for netstat)</td>
+                    <td>ss</td>
+                    <td>عرض إحصائيات المقابس (بديل حديث لـ netstat)</td>
+                </tr>
+                <tr>
+                    <td>dig</td>
+                    <td>DNS lookup utility</td>
+                    <td>dig example.com</td>
+                    <td>أداة استعلام DNS للبحث عن معلومات النطاقات</td>
+                </tr>
+                <tr>
+                    <td>host</td>
+                    <td>DNS lookup utility for hostname/IP translation</td>
+                    <td>host example.com</td>
+                    <td>أداة استعلام DNS لتحويل اسم المضيف إلى IP والعكس</td>
+                </tr>
+                <tr>
+                    <td>ssh</td>
+                    <td>Secure remote login to another machine</td>
+                    <td>ssh user@hostname</td>
+                    <td>الاتصال الآمن بجهاز أو خادم بعيد عبر الشبكة باستخدام اسم المستخدم</td>
                 </tr>
                 </tbody>
             </table>
@@ -1257,11 +1317,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 · Linux Commands Sheet · Crafted by <a href="https://github.com/1M7md-CS" target="_blank"
-                                                             rel="noopener noreferrer">Mohammad Hammad</a></p>
+            <p>&copy; 2026 · Linux Commands Sheet · Crafted by <a href="https://github.com/1M7md-CS" target="_blank"
+                                                                  rel="noopener noreferrer">Mohammad Hammad</a></p>
         </div>
     </footer>
 </div>
+
+<button id="backToTop" title="Back to top">↑</button>
 
 <script src="src/js/main.js"></script>
 </body>
