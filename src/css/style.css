@@ -100,7 +100,7 @@ body {
     background: var(--clr-bg-dark);
     color: white;
     padding: 16px;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     text-align: left;
     font-weight: 600;
     text-transform: uppercase;
@@ -110,7 +110,7 @@ body {
 .command-table td {
     padding: 14px 16px;
     border-bottom: 1px solid var(--clr-border);
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     vertical-align: top;
 }
 
@@ -143,7 +143,7 @@ body {
 
 .command-table tbody tr:hover {
     background: var(--clr-bg-light);
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s;
 }
 
 .command-table tbody tr:last-child td {
@@ -164,7 +164,7 @@ body {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     box-shadow: var(--box-shadow);
 }
 
@@ -250,7 +250,7 @@ body {
     color: #cbd5e0;
     text-decoration: none;
     margin-bottom: 8px;
-    transition: color 0.2s ease;
+    transition: color 0.2s;
     max-width: fit-content;
 }
 
@@ -268,7 +268,7 @@ body {
     padding: 20px;
     border-top: 1px solid #2d3748;
     color: #a0aec0;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
 }
 
 .footer-bottom a {
@@ -278,6 +278,41 @@ body {
 
 .footer-bottom a:hover {
     text-decoration: underline;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--clr-primary), #4299e1);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: linear-gradient(135deg, var(--clr-primary-hover), #3182ce);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {
@@ -353,7 +388,7 @@ body {
     .command-table th,
     .command-table td {
         padding: 12px;
-        font-size: 0.8125rem;
+        font-size: 0.8rem;
     }
 }
 

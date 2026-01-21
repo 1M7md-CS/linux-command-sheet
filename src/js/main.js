@@ -28,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                    behavior: 'smooth', block: 'start'
                 });
             }
         });
@@ -70,9 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.3
+        root: null, rootMargin: '0px', threshold: 0.3
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -87,5 +84,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelectorAll('.section').forEach(section => {
         observer.observe(section);
+    });
+});
+
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    backToTopBtn.classList.toggle("show", window.scrollY > 400);
+});
+
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0, behavior: "smooth"
     });
 });
