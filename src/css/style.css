@@ -114,6 +114,10 @@ body {
     vertical-align: top;
 }
 
+.command-table tr td:last-child {
+    direction: rtl;
+}
+
 .col-command {
     width: 20%;
     font-weight: 600;
